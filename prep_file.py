@@ -13,12 +13,12 @@ if (filename[-9:] == "cache.out"):
 saved = []
 if (cache):
     for line in data:
-        fixed = line[25:34].replace('.', '')
+        fixed = line[25:35].replace('.', '')
         saved.append(int(fixed))
         f.write(str(int(fixed)) + '\n')
 else:
     for line in data:
-        fixed = line[72:75].replace(",", ".")
+        fixed = line[72:76].replace(",", ".")
         print(fixed)
         saved.append(float(fixed))
         f.write(fixed + "\n")
