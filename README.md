@@ -8,9 +8,24 @@ To test with Splash-3 benchmark, please clone with submodules:
 
 
 ## Usage
+
+usage: monitor.py [-h] -a APP [-s SAMP_PERIOD] [-d DUR]
+
+arguments:
+
+&nbsp;&nbsp;&nbsp;&nbsp;-h, --help  show this help message and exit
+
+&nbsp;&nbsp;&nbsp;&nbsp;-a APP          application name  
+
+&nbsp;&nbsp;&nbsp;&nbsp;-s SAMP_PERIOD  sampling period in milliseconds  [default = 1ms]
+
+&nbsp;&nbsp;&nbsp;&nbsp;-d DUR          sampling duration in seconds    [default = 0.5s]
+  
+
+
 To start monitoring an application, run
 
-`` python3 monitor.py application_name ``
+`` python3 monitor.py -a application_name -s sampling_period -d duration ``
 
 After executing, note the process id of the monitor application
 
