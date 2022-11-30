@@ -17,9 +17,9 @@ prefix="$1_$now"
 mkdir results/$prefix
 
 # set the sample period in ms
-sampling_period=1
+sampling_period=$2
 # set window duration in seconds 
-duration=0.5
+duration=$3
 
 # call perf to get samples
 perf stat -B -I $sampling_period -e cycles,instructions,L1-dcache-loads  -p $pid  -o results/tmp.log  sleep $duration
