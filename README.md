@@ -1,5 +1,5 @@
 # lightfat
-Barebones implementation of perf process monitoring with signals
+Barebones implementation of perf process monitoring of IPC and L1-load-accesses with signals
 
 ## Cloning
 To test with Splash-3 benchmark, please clone with submodules:
