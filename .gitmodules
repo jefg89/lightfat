@@ -1,3 +1,6 @@
 [submodule "Splash-3"]
 	path = Splash-3
 	url = https://github.com/jefg89/Splash-3.git
+[submodule "buffer_overflow"]
+	path = buffer_overflow
+	url = git@github.com:jefg89/buffer_overflow.git
