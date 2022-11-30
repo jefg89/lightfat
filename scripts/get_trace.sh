@@ -25,8 +25,8 @@ duration=0.5
 perf stat -B -I $sampling_period -e cycles,instructions,L1-dcache-loads  -p $pid  -o results/tmp.log  sleep $duration
 
 #create sub-files
-cat results/tmp.log | grep "cache" > cache_raw.log; cat cache_raw.log | grep -v not > results/$prefix/cache.out
-cat results/tmp.log | grep "ins" > ipc_raw.log; cat ipc_raw.log | grep -v not > results/$prefix/ipc.out
+cat results/tmp.log | grep "cache" > results/cache_raw.log; cat results/cache_raw.log | grep -v not > results/$prefix/cache.out
+cat results/tmp.log | grep "ins" > results/ipc_raw.log; cat results/ipc_raw.log | grep -v not > results/$prefix/ipc.out
 rm -rf results/*.log
 
 # call script to fix file format
