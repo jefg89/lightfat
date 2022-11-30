@@ -19,6 +19,5 @@ if (cache):
 else:
     for line in data:
         fixed = line[72:76].replace(",", ".")
-        print(fixed)
         saved.append(float(fixed))
         f.write(fixed + "\n")

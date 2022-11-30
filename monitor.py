@@ -3,23 +3,25 @@ import subprocess
 import sys
 import time
 
+# This application starts the monitoring of a target application (argument)
 
 def handler(signum, frame):
-    subprocess.run(["./get_trace.sh", app_name])
-    print("RECEIVED SIGNAL: starting monitoring...")
+    print("SIGNAL RECEIVED: Getting the traces...")
+    subprocess.run(["scripts/get_trace.sh", app_name])
+
 
 
 def loop():
     cont = True
-    print("appname is " + app_name)
+    print("Waiting for signal for " + app_name + " application...")
     signal.signal(signal.SIGUSR1, handler)
-    i = 0
     while(cont):
-        i = i+1
+        signal.pause()
 
     
     
 if __name__ == '__main__':
+    print("Monitor process running with PID = " + str(os.getpid()))
     global app_name
     app_name = sys.argv[1]
     loop()
