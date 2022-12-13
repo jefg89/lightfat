@@ -7,3 +7,6 @@
 [submodule "pcf2bdf"]
 	path = pcf2bdf
 	url = https://github.com/ganaware/pcf2bdf
+[submodule "tinyexr"]
+	path = tinyexr
+	url = https://github.com/syoyo/tinyexr
