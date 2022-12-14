@@ -1,3 +1,4 @@
 results/*
 examples/signal
 training/*
+*.exr
